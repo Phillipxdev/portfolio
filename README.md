@@ -15,7 +15,6 @@ I enjoy transforming ideas into clean, responsive, and interactive web experienc
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- React
 - Tailwind CSS
 - Responsive Web Design
 - Mobile-First Development
