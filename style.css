@@ -1923,3 +1923,223 @@ body.light-theme ::selection {
     background: #9a6f16;
     color: #ffffff;
 }
+
+/* ==========================================
+   MOBILE TEXT / OVERFLOW FIX
+========================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Prevent containers from leaving screen */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero,
+.hero-container,
+.hero-content,
+.hero-card {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.hero-description {
+    width: 100%;
+    max-width: 650px;
+
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    line-height: 1.7;
+}
+
+
+/* Prevent headings overflowing */
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+    max-width: 100%;
+}
+
+
+/* ==========================================
+   CODE WINDOW
+========================================== */
+
+.code-window {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.code-window pre {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+    overflow-x: hidden;
+}
+
+.code-window code {
+    display: block;
+
+    max-width: 100%;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding-inline: 18px;
+    }
+
+    .hero {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 100%;
+
+        gap: 40px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.7rem, 12vw, 4.5rem);
+        line-height: 0.95;
+
+        overflow-wrap: break-word;
+    }
+
+    .typing-heading {
+        font-size: clamp(1.7rem, 7vw, 2.5rem);
+    }
+
+    .hero-description {
+        width: 100%;
+
+        font-size: 1rem;
+        line-height: 1.8;
+
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+
+    /* Buttons */
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 100%;
+
+        gap: 16px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* Code card */
+
+    .hero-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .code-window {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .code-window pre,
+    .code-window code {
+        font-size: 13px;
+        line-height: 1.8;
+
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding-inline: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.4rem, 11vw, 3.5rem);
+    }
+
+    .typing-heading {
+        font-size: 1.6rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .code-window pre,
+    .code-window code {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+}
