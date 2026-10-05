@@ -1,0 +1,845 @@
+/* ==========================================================
+   LUXURY BLACK & YELLOW PORTFOLIO THEME
+   Load AFTER your main style.css
+========================================================== */
+
+:root {
+    --luxury-black: #050505;
+    --luxury-dark: #0a0a0a;
+    --luxury-card: #101010;
+    --luxury-card-light: #171717;
+
+    --luxury-white: #f5f5f5;
+    --luxury-grey: #a0a0a0;
+    --luxury-muted: #737373;
+
+    --luxury-yellow: #ffd600;
+    --luxury-yellow-soft: #ffe66d;
+
+    --luxury-border: rgba(255, 214, 0, 0.12);
+    --luxury-border-hover: rgba(255, 214, 0, 0.45);
+}
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 214, 0, 0.035),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #050505 0%,
+            #090909 50%,
+            #050505 100%
+        );
+
+    color: var(--luxury-white);
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header {
+    background: rgba(5, 5, 5, 0.88);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid var(--luxury-border);
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo {
+    color: var(--luxury-white);
+}
+
+.logo span {
+    color: var(--luxury-yellow);
+}
+
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+.nav-link {
+    position: relative;
+
+    color: var(--luxury-grey);
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--luxury-yellow);
+}
+
+
+/* Navigation underline */
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--luxury-yellow);
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+/* Remove old navigation icons/effects */
+
+.nav-link::before {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 25%,
+            rgba(255, 214, 0, 0.045),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(255, 255, 255, 0.018),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #050505,
+            #101010,
+            #050505
+        );
+}
+
+
+/* Remove Batman signal */
+
+.hero::after {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   HERO TEXT
+========================================================== */
+
+.hero-title {
+    color: #ffffff;
+
+    text-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.55);
+}
+
+
+.intro,
+.hero h1 span,
+.hero-title span,
+.highlight,
+.accent-text,
+.typing-cursor {
+    color: var(--luxury-yellow);
+}
+
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.btn {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 145px;
+    min-height: 50px;
+
+    padding: 0 26px;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Remove Batman button effects */
+
+.btn::before,
+.btn::after {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   PRIMARY BUTTON
+========================================================== */
+
+.primary-btn {
+    background: var(--luxury-yellow);
+
+    color: #050505;
+
+    border: 1px solid var(--luxury-yellow);
+}
+
+
+.primary-btn:hover {
+    background: var(--luxury-yellow-soft);
+
+    color: #050505;
+
+    border-color: var(--luxury-yellow-soft);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.55),
+        0 0 22px rgba(255, 214, 0, 0.14);
+}
+
+
+/* ==========================================================
+   SECONDARY BUTTON
+========================================================== */
+
+.secondary-btn {
+    background: transparent;
+
+    color: var(--luxury-yellow);
+
+    border: 1px solid rgba(255, 214, 0, 0.35);
+}
+
+
+.secondary-btn:hover {
+    background: rgba(255, 214, 0, 0.08);
+
+    color: var(--luxury-yellow);
+
+    border-color: var(--luxury-yellow);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.45),
+        0 0 18px rgba(255, 214, 0, 0.08);
+}
+
+
+/* ==========================================================
+   SECTION HEADINGS
+========================================================== */
+
+.section-heading p {
+    color: var(--luxury-yellow);
+}
+
+
+.section-heading h2 {
+    color: #ffffff;
+}
+
+
+.section-heading::after {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--luxury-yellow),
+            transparent
+        );
+}
+
+
+/* ==========================================================
+   SKILLS SECTION
+========================================================== */
+
+.skills-section {
+    background:
+        linear-gradient(
+            180deg,
+            #080808,
+            #050505
+        );
+}
+
+
+/* ==========================================================
+   SKILL CARDS
+========================================================== */
+
+.skill-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121212,
+            #090909
+        );
+
+    border: 1px solid var(--luxury-border);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--luxury-border-hover);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(255, 214, 0, 0.05);
+}
+
+
+/* Remove old animated card line */
+
+.skill-card::after {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   SKILL ICON
+========================================================== */
+
+.skill-icon {
+    color: var(--luxury-yellow);
+
+    background: rgba(255, 214, 0, 0.05);
+
+    border-color: rgba(255, 214, 0, 0.15);
+}
+
+
+/* ==========================================================
+   PROJECT CARDS
+========================================================== */
+
+.project-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121212,
+            #080808
+        );
+
+    border: 1px solid var(--luxury-border);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.project-card:hover {
+    transform:
+        translateY(-10px)
+        scale(1.01);
+
+    border-color: var(--luxury-border-hover);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.65),
+        0 0 25px rgba(255, 214, 0, 0.05);
+}
+
+
+/* Remove old spotlight */
+
+.project-card::before {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   PROJECT IMAGES
+========================================================== */
+
+.project-card img {
+    filter:
+        brightness(0.82)
+        contrast(1.05);
+
+    transition:
+        transform 0.55s ease,
+        filter 0.55s ease;
+}
+
+
+.project-card:hover img {
+    transform: scale(1.05);
+
+    filter:
+        brightness(1)
+        contrast(1.06);
+}
+
+
+/* ==========================================================
+   PROJECT TAGS
+========================================================== */
+
+.project-overlay span,
+.project-tech span {
+    color: var(--luxury-yellow);
+
+    border-color: rgba(255, 214, 0, 0.20);
+
+    background: rgba(255, 214, 0, 0.04);
+}
+
+
+/* ==========================================================
+   PROJECT LINKS
+========================================================== */
+
+.project-links a {
+    color: var(--luxury-grey);
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.project-links a:hover {
+    color: var(--luxury-yellow);
+}
+
+
+/* ==========================================================
+   CODE WINDOW
+========================================================== */
+
+.code-window {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101010,
+            #050505
+        );
+
+    border: 1px solid var(--luxury-border);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.code-window:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--luxury-border-hover);
+
+    box-shadow:
+        0 40px 90px rgba(0, 0, 0, 0.75),
+        0 0 30px rgba(255, 214, 0, 0.05);
+}
+
+
+/* Remove scanner */
+
+.code-window::after {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   ABOUT SECTION
+========================================================== */
+
+.profile-image {
+    border-color: rgba(255, 214, 0, 0.20);
+
+    filter:
+        grayscale(10%)
+        contrast(1.05)
+        brightness(0.95);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.profile-image:hover {
+    transform: scale(1.02);
+
+    border-color: var(--luxury-yellow);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.65),
+        0 0 25px rgba(255, 214, 0, 0.06);
+}
+
+
+.about-info div {
+    border-color: var(--luxury-border);
+}
+
+
+.about-info div:hover {
+    border-color: var(--luxury-border-hover);
+}
+
+
+.about-info span {
+    color: var(--luxury-yellow);
+}
+
+
+/* ==========================================================
+   CONTACT SECTION
+========================================================== */
+
+.contact-section {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 214, 0, 0.025),
+            transparent 45%
+        ),
+        #060606;
+}
+
+
+/* ==========================================================
+   CONTACT FORM
+========================================================== */
+
+.contact-form {
+    background:
+        linear-gradient(
+            145deg,
+            #121212,
+            #080808
+        );
+
+    border: 1px solid var(--luxury-border);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55);
+}
+
+
+/* ==========================================================
+   FORM INPUTS
+========================================================== */
+
+.contact-form input,
+.contact-form textarea,
+.form-group input,
+.form-group textarea {
+    background: #080808;
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: var(--luxury-yellow);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 214, 0, 0.06),
+        0 0 20px rgba(255, 214, 0, 0.04);
+
+    transform: translateY(-2px);
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--luxury-muted);
+}
+
+
+/* ==========================================================
+   THEME BUTTON
+========================================================== */
+
+.theme-btn {
+    color: var(--luxury-yellow);
+
+    background: #101010;
+
+    border: 1px solid rgba(255, 214, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.theme-btn:hover {
+    transform: translateY(-3px);
+
+    background: #171717;
+
+    border-color: var(--luxury-yellow);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.45),
+        0 0 15px rgba(255, 214, 0, 0.08);
+}
+
+
+/* ==========================================================
+   BACK TO TOP
+========================================================== */
+
+.back-to-top {
+    background: var(--luxury-yellow);
+
+    color: #050505;
+
+    border: 1px solid var(--luxury-yellow);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.back-to-top:hover {
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    background: var(--luxury-yellow-soft);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(255, 214, 0, 0.15);
+}
+
+
+/* ==========================================================
+   SCROLL PROGRESS
+========================================================== */
+
+.scroll-progress {
+    background:
+        linear-gradient(
+            90deg,
+            #8a7500,
+            var(--luxury-yellow),
+            #fff0a0
+        );
+
+    box-shadow:
+        0 0 12px rgba(255, 214, 0, 0.25);
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            var(--luxury-yellow),
+            #8a7500
+        );
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--luxury-yellow-soft);
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer,
+.footer {
+    background: #050505;
+
+    border-top: 1px solid var(--luxury-border);
+}
+
+
+/* ==========================================================
+   TEXT SELECTION
+========================================================== */
+
+::selection {
+    background: var(--luxury-yellow);
+
+    color: #050505;
+}
+
+
+/* ==========================================================
+   REMOVE ALL OLD BATMAN ELEMENTS
+========================================================== */
+
+.bat-container,
+.flying-bat,
+.hero-spotlight {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        background: rgba(5, 5, 5, 0.98);
+
+        border-bottom:
+            1px solid var(--luxury-border);
+    }
+
+
+    .btn {
+        min-height: 52px;
+
+        padding: 0 22px;
+    }
+
+
+    .hero::after,
+    .bat-container,
+    .flying-bat,
+    .hero-spotlight {
+        display: none !important;
+    }
+
+
+    .project-card:hover,
+    .skill-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
